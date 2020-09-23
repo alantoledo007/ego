@@ -15,17 +15,17 @@ class getModelDetailsTest extends TestCase
      */
     public function StatusCode()
     {
-        $response = $this->get('/api/details/1');
+        $response = $this->get('/api/details/model/1');
         $response->assertStatus(200);
 
-        $response = $this->get('/api/details/a');
+        $response = $this->get('/api/details/model/a');
         $response->assertStatus(404);
     }
 
 
     public function Structure()
     {
-        $response = $this->json('GET','/api/details/1');
+        $response = $this->json('GET','/api/details/model/1');
 
         $response->assertJsonStructure([
                'type',
