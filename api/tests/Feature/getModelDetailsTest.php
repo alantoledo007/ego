@@ -10,23 +10,23 @@ class getModelDetailsTest extends TestCase
 {
     /**
      * A basic feature test example.
-     * @test
+     * 
      * @return void
      */
-    public function StatusCode()
+    public function testStatusCode()
     {
-        $response = $this->get('/api/details/1');
+        $response = $this->get('/api/details/model/1');
         $response->assertStatus(200);
 
-        $response = $this->get('/api/details/a');
+        $response = $this->get('/api/details/model/a');
         $response->assertStatus(404);
     }
 
 
-    public function Structure()
+    public function testStructure()
     {
-        $response = $this->json('GET','/api/details/1');
-
+        $response = $this->json('GET','/api/details/model/1');
+        
         $response->assertJsonStructure([
                'type',
                'data' => [
@@ -39,9 +39,8 @@ class getModelDetailsTest extends TestCase
                         'model_id'
                     ]
                ]
-        ]);
-
-        $response->assertJson([
+        ])
+        ->assertJson([
             'type' => 'details'
         ],$strict = false);
     }

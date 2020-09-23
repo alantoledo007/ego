@@ -10,18 +10,18 @@ class getAllModelsTest extends TestCase
 {
     /**
      * A basic feature test example.
-     * @test
+     * 
      * @return void
      */
 
-    public function StatusCode()
+    public function testStatusCode()
     {
         $response = $this->get('/api/models');
 
         $response->assertStatus(200);
     }
     
-    public function Structure()
+    public function testStructure()
     {
         $response = $this->json('GET','/api/models');
 
