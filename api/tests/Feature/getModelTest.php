@@ -11,10 +11,9 @@ class getModelTest extends TestCase
     /**
      * A basic feature test example.
      *
-     * @test
      * @return void
      */
-    public function StatusCode()
+    public function testStatusCodeTest()
     {
         $response = $this->get('/api/models/1');
         $response->assertStatus(200);
@@ -23,29 +22,26 @@ class getModelTest extends TestCase
         $response->assertStatus(404);
     }
     
-    public function Structure()
+    public function testStructureTest()
     {
         $response = $this->json('GET','/api/models/1');
 
         $response->assertJsonStructure([
                'type',
                'data' => [
-                    [
-                        'id',
-                        'model',
-                        'year',
-                        'price',
-                        'version',
-                        'title',
-                        'short_description',
-                        'card_image',
-                        'main_image',
-                        'vehicle_id'
-                    ]
+                    'id',
+                    'model',
+                    'year',
+                    'price',
+                    'version',
+                    'title',
+                    'short_description',
+                    'card_image',
+                    'main_image',
+                    'vehicle_id'
                ]
-        ]);
-
-        $response->assertJson([
+               ])
+        ->assertJson([
             'type' => 'models'
         ],$strict = false);
     }
