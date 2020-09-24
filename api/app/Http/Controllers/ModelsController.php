@@ -21,7 +21,6 @@ class ModelsController extends Controller
         $models = $models != null ? $models->orderBy($order_by,$order_direction) : Model::orderBy($order_by,$order_direction);
         $models = $models->get()->toArray();
 
-        dd($models);
 
         return response()->json([
             'type' => 'models',

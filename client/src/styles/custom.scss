@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+
+$font-family-base: 'Montserrat';
+@import "~bootstrap/scss/bootstrap";
+
+.card-title.h5{
+    font-family: 'Montserrat';
+    font-size: 28px;
+    font-weight: 600;
+    width: 270px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.07;
+    letter-spacing: -0.65px;
+    text-align: center;
+    color: #000000;
+    margin-bottom: 8px;
+}
+
+.card-body{
+    padding:0px;
+    span{
+        font-family: 'Montserrat';
+        font-size: 14px;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        line-height: normal;
+        letter-spacing: -0.28px;
+        color: #191919;
+    }
+}
+
+.card{
+    margin: 26px auto;
+}

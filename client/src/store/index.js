@@ -9,7 +9,7 @@ import thunk from "redux-thunk";
 
 
 //code..
-store = createStore(
+const store = createStore(
     combineReducers({
         models
     }),
