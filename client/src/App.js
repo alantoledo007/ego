@@ -4,9 +4,11 @@ import React from 'react';
 
 //components
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 //views
 import Home from './views/Home';
+import ModelSheet from './views/ModelSheet';
 
 //UI
 import './styles/custom.scss';
@@ -17,10 +19,9 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <Home />
-      <Route>
-    
-      </Route> 
+      <Route exact path="/" component={Home} />
+      <Route exact path="/ficha-de-modelo/:id?" component={ModelSheet} />
+      <Footer />
     </React.Fragment>
   );
 }

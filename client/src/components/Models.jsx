@@ -28,7 +28,7 @@ function Models({models, getModels, orderBy, orderDirection, vehicleId}){
 
     return (
         <Row>
-            {state.models && state.models.map(item => (
+            {state.models.map(item => (
                 <ModelCard key={item.id} data={item} />
             ))}
         </Row>

@@ -26,7 +26,7 @@ class ModelSeeder extends Seeder
         Model::create([//id 1
             'model' => 'Etios',
             'year' => 2019,
-            'price' => 815.900,
+            'price' => 815900,
             'version' => 'Hatchback',
             'title' => 'Tu primer Toyota, mejor que nunca',
             'short_description' => $description,

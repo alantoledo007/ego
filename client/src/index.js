@@ -7,13 +7,11 @@ import {Provider} from 'react-redux';
 import store from './store/index';
 
 ReactDOM.render(
-  <React.StrictMode>
     <Provider store={store}>
       <Router>
         <App/>
       </Router>
-    </Provider>
-  </React.StrictMode>,
+    </Provider>,
   document.getElementById('root')
 );
 

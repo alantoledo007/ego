@@ -13,12 +13,12 @@ function Navbar(){
     return (
         <nav className={s['navbar-ego']}>
             <Link to="/" className={s['navbar-ego-brand']}>
-               <img src="/img/logo.svg" />
+               <img src="/img/logo.svg" alt="Ego - logo" />
             </Link>
             <Container className="mt-auto">
                 <ul>
                     <li><NavLink activeClassName={s['active']} exact to="/">Modelos</NavLink></li>
-                    <li><NavLink activeClassName={s['active']} exact to="/models">Ficha de modelo</NavLink></li>
+                    <li><NavLink activeClassName={s['active']} to="/ficha-de-modelo" >Ficha de modelo</NavLink></li>
                 </ul>
             </Container>
         </nav>
