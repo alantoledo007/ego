@@ -24,7 +24,7 @@ function Model({id, model, getModel}){
     return (
         <Row>
             {/* La única forma que sean iguales es que sean undefined (id === undefined && model.model === undefined) */}
-            {id === model.model && <Redirect to="/"/>}
+            {id === model.model && <Redirect to="/ego/"/>}
             <Col md={6}>
                 <img className={'img-fluid '+s['img-main']} src={model.main_image} alt={'Imagen principal de '+model.model} />
             </Col>
