@@ -25,18 +25,18 @@ function Navbar(){
     return (
         <React.Fragment>
             <nav className={s['navbar-ego'] + ' sticky-top bg-white'}>
-                <Link to="/" className={s['navbar-ego-brand']}>
-                <img src="/img/logo.svg" alt="Ego - logo" />
+                <Link to="/ego" className={s['navbar-ego-brand']}>
+                <img src="/ego/img/logo.svg" alt="Ego - logo" />
                 </Link>
                 <Container className="mt-auto">
                     <ul>
-                        <li><NavLink activeClassName={s['active']} exact to="/">Modelos</NavLink></li>
-                        <li><NavLink activeClassName={s['active']} to="/ficha-de-modelo" >Ficha de modelo</NavLink></li>
+                        <li><NavLink activeClassName={s['active']} exact to="/ego/">Modelos</NavLink></li>
+                        <li><NavLink activeClassName={s['active']} to="/ego/ficha-de-modelo" >Ficha de modelo</NavLink></li>
                     </ul>
                 </Container>
                 <Link to="#" onClick={handleMenu} className={s['btn-menu']}>
                     <span>Menú</span>
-                <img src="/img/menu.svg" alt="Menú - Icono" />
+                <img src="/ego/img/menu.svg" alt="Menú - Icono" />
                 </Link>
             </nav>
             {<Menu handleToggle={handleMenu} show={state.menuToggled} />}
@@ -52,7 +52,7 @@ function Menu({show, handleToggle}){
                 <li>
                     <a href="#" onClick={handleToggle}>
                         Cerrar
-                        <img src="/img/close.svg" alt="Image to close menu" />
+                        <img src="/ego/img/close.svg" alt="Image to close menu" />
                     </a>
                 </li>
             </ul>

@@ -19,8 +19,8 @@ function App() {
   return (
     <React.Fragment>
       <Navbar />
-      <Route exact path="/" component={Home} />
-      <Route exact path="/ficha-de-modelo/:id?" component={ModelSheet} />
+      <Route exact path="/ego/" component={Home} />
+      <Route exact path="/ego/ficha-de-modelo/:id?" component={ModelSheet} />
       <Footer />
     </React.Fragment>
   );
