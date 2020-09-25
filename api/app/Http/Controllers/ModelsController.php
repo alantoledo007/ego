@@ -8,20 +8,19 @@ use App\Model;
 class ModelsController extends Controller
 {
     public function index(Request $request){
-        $order_by = $request->order_by;
-        $order_direction = $request->order_direction;
-        $vehicle_id = $request->vehicle_id;
-        $order_by = $order_by == 'year' || $order_by == 'price' ? $order_by : 'id';
-        $order_direction = $order_direction == 'asc' || $order_direction == 'desc' ? $order_direction : 'asc';
+        $orderBy = $request->orderBy;
+        $orderDirection = $request->orderDirection;
+        $vehicleId = $request->vehicleId;
+        $orderBy = $orderBy == 'year' || $orderBy == 'price' ? $orderBy : 'id';
+        $orderDirection = $orderDirection == 'asc' || $orderDirection == 'desc' ? $orderDirection : 'asc';
 
         $models = null;
-        if($vehicle_id){
-            $models = Model::where('vehicle_id',is_numeric($vehicle_id) ? $vehicle_id : 'nn');
+        if($vehicleId){
+            $models = Model::where('vehicle_id',is_numeric($vehicleId) ? $vehicleId : 'nn');
         }
-        $models = $models != null ? $models->orderBy($order_by,$order_direction) : Model::orderBy($order_by,$order_direction);
+        $models = $models != null ? $models->orderBy($orderBy,$orderDirection) : Model::orderBy($orderBy,$orderDirection);
         $models = $models->get()->toArray();
 
-        dd($models);
 
         return response()->json([
             'type' => 'models',

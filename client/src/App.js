@@ -1,12 +1,27 @@
-import React from 'react';
+//General
 import { Route } from 'react-router-dom';
+import React from 'react';
 
+//components
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+
+//views
+import Home from './views/Home';
+import ModelSheet from './views/ModelSheet';
+
+//UI
+import './styles/custom.scss';
+
+
+//code..
 function App() {
   return (
     <React.Fragment>
-      <Route>
-        
-      </Route> 
+      <Navbar />
+      <Route exact path="/" component={Home} />
+      <Route exact path="/ficha-de-modelo/:id?" component={ModelSheet} />
+      <Footer />
     </React.Fragment>
   );
 }

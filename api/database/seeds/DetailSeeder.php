@@ -15,7 +15,7 @@ class DetailSeeder extends Seeder
         $models = Model::all();
 
         $description = 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed omnis praesentium adipisci consequatur molestias? Optio quam delectus maiores vitae aliquid. Minus dolorem excepturi, voluptate alias nobis omnis laudantium accusamus magni.';
-        $base_uri = config('app.url').'/img/models/';
+        $base_uri = config('app.url').'/img/models/details/';
 
         foreach ($models as $item) {
 
