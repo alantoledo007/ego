@@ -19,12 +19,13 @@ Ejecutar servidor:
 ## Paso 2, React (Opcional).
 
 Puede acceder directamente a https://alantoledo007.github.io/ego o continuar con los pasos de instalación.
-**importante** Es deploy es de React, para poder correrlo correctamente necesitará instalar y correr un servidor local
-con Laravel (paso 1).
+
+**importante: Es deploy es de React, para poder correrlo correctamente necesitará instalar y correr un servidor local
+con Laravel (paso 1). **
 
 continuando con la instalación del cliente (React)...
 
-Ahora debes estar situado en el directorio "/client".
+Debes estar situado en el directorio "/client".
 
 `yarn` o `npm install`
 
@@ -37,7 +38,7 @@ Ahora solo queda ejecutar el servidor.
 ## Ya deberías correr "EGO"
 
 Url del server: **http://localhost:8000**
-y la del cliente: **http://localhost:3000/ego/** o **https://alantoledo0007.github.io/ego/**
+y la del cliente: **http://localhost:3000/ego/** o **https://alantoledo007.github.io/ego/**
 
 
 
