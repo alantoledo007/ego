@@ -60,7 +60,7 @@ function Filters({vehicles, getVehicles, filterVehicle, vehicleId, orderBy, orde
             <Dropdown alignRight className="mr-auto" onToggle={handleToggleFilter}>
                 <Dropdown.Toggle as={CustomToggleFilter}>
                         Filtrar por
-                        <img src="/img/fill-1.svg" alt="Flecha dropdown"
+                        <img src="/ego/img/fill-1.svg" alt="Flecha dropdown"
                              className={s['Fill-1'] + (state.dropdownToggledFilter ? ' ' + s['active'] : '')} />
                 </Dropdown.Toggle>
 
@@ -105,7 +105,7 @@ function Filters({vehicles, getVehicles, filterVehicle, vehicleId, orderBy, orde
             <Dropdown alignRight className="ml-auto" onToggle={handleToggle}>
                 <Dropdown.Toggle as={CustomToggle}>
                         Ordernar por
-                        <img src="/img/fill-1.svg" alt="Flecha dropdown"
+                        <img src="/ego/img/fill-1.svg" alt="Flecha dropdown"
                              className={s['Fill-1'] + (state.dropdownToggled ? ' ' + s['active'] : '')} />
                 </Dropdown.Toggle>
 
