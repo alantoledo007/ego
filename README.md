@@ -1,6 +1,6 @@
 # ego
 
-## Paso 1, Laravel.
+## Paso 1, Laravel [Requerido].
 
 Para los siguientes comandos debes estar situado en el directorio "/api".
 
@@ -12,14 +12,17 @@ Migrar base de datos y seeders
 
 Ejecutar servidor:
 
-`php artisan serve --port=[port] --host=[ipaddress]` (Si nó especifica un puerto ni un host, los valores por defectos serán: 8000 y localhost)
+`php artisan serve --port=8000 --host=localhost` (el cliente utiliza el puerto 8000 sobre el localhost)
 
 ¡Listo!
 
-## Paso 2, React.
------
-**importante** Para que todo funcione se necesitan que hambos servidores funcionen en paralelo.
------
+## Paso 2, React (Opcional).
+
+Puede acceder directamente a https://alantoledo007.github.io/ego o continuar con los pasos de instalación.
+**importante** Es deploy es de React, para poder correrlo correctamente necesitará instalar y correr un servidor local
+con Laravel (paso 1).
+
+continuando con la instalación del cliente (React)...
 
 Ahora debes estar situado en el directorio "/client".
 
@@ -33,8 +36,8 @@ Ahora solo queda ejecutar el servidor.
 
 ## Ya deberías correr "EGO"
 
-Por defecto la URL del server es: **http://localhost:8000**
-y la del cliente: **http://localhost:3000**
+Url del server: **http://localhost:8000**
+y la del cliente: **http://localhost:3000/ego/** o **https://alantoledo0007.github.io/ego/**
 
 
 
