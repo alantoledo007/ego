@@ -17,13 +17,21 @@ import s from '../styles/filters.module.scss';
 function Filters({vehicles, getVehicles, filterVehicle, vehicleId, orderBy, orderDirection, applyOrder}){
 
     const [state, setState] = useState({
-        dropdownToggled: false
+        dropdownToggled: false,
+        dropdownToggledFilter: false
     });
 
     const handleToggle = show => {
         setState({
             ...state,
             dropdownToggled: show
+        })
+    }
+
+    const handleToggleFilter = show => {
+        setState({
+            ...state,
+            dropdownToggledFilter: show
         })
     }
 
@@ -49,18 +57,51 @@ function Filters({vehicles, getVehicles, filterVehicle, vehicleId, orderBy, orde
 
     return(
         <div className={s['filter-nav']}>
-            <span className={s['filter-title']}>
-                Filtrar por
-            </span>
-            <Link to="#" onClick={handleVehicleId(null)} className={s['filter-badge'] + (vehicleId === null ? ' ' + s['active'] : '')}>
-                Todos
-            </Link>
-            {vehicles.map(item => (
-                <Link key={item.id} onClick={handleVehicleId(item.id)} to="#" className={s['filter-badge'] + (vehicleId === item.id ? ' '+s['active'] : '')}>
-                    {item.name}
-                </Link>
-            ))}
+            <Dropdown alignRight className="mr-auto" onToggle={handleToggleFilter}>
+                <Dropdown.Toggle as={CustomToggleFilter}>
+                        Filtrar por
+                        <img src="/img/fill-1.svg" alt="Flecha dropdown"
+                             className={s['Fill-1'] + (state.dropdownToggledFilter ? ' ' + s['active'] : '')} />
+                </Dropdown.Toggle>
 
+                <Dropdown.Menu >
+                    <Dropdown.Item
+                        active={vehicleId === null}
+                        onClick={handleVehicleId(null)}
+                        eventKey="1"
+                    >
+                        Todos
+                    </Dropdown.Item>
+
+                    {vehicles.map((item,index) => (
+                        <Dropdown.Item key={item.id}
+                            onClick={handleVehicleId(item.id)}
+                            active={vehicleId === item.id}
+                            eventKey={''+(index+2)}
+                        >
+                            {item.name}
+                        </Dropdown.Item>
+                    ))}
+                    
+                </Dropdown.Menu>
+            </Dropdown>
+
+
+            <div className={s['desktop-filter']}>
+                <span className={s['filter-title']}>
+                    Filtrar por
+                </span>
+                <Link to="#" onClick={handleVehicleId(null)} className={s['filter-badge'] + (vehicleId === null ? ' ' + s['active'] : '')}>
+                    Todos
+                </Link>
+                {vehicles.map(item => (
+                    <Link key={item.id} onClick={handleVehicleId(item.id)} to="#" className={s['filter-badge'] + (vehicleId === item.id ? ' '+s['active'] : '')}>
+                        {item.name}
+                    </Link>
+                ))}
+            </div>
+
+            <div className="w-25 text-right">
             <Dropdown alignRight className="ml-auto" onToggle={handleToggle}>
                 <Dropdown.Toggle as={CustomToggle}>
                         Ordernar por
@@ -106,6 +147,7 @@ function Filters({vehicles, getVehicles, filterVehicle, vehicleId, orderBy, orde
                     </Dropdown.Item>
                 </Dropdown.Menu>
             </Dropdown>
+            </div>
         </div>
     );
 }
@@ -114,6 +156,21 @@ function Filters({vehicles, getVehicles, filterVehicle, vehicleId, orderBy, orde
 const CustomToggle = React.forwardRef(({ children, onClick }, ref) => (
     <a
         className={s['filter-title'] + ' ' + s['filter-title-right']}
+        href="#"
+        ref={ref}
+        onClick={(e) => {
+        e.preventDefault();
+        onClick(e);
+        }}
+    >
+        {children}
+    </a>
+));
+
+
+const CustomToggleFilter = React.forwardRef(({ children, onClick }, ref) => (
+    <a
+        className={s['filter-title'] + ' ' + s['filter-title-left']}
         href="#"
         ref={ref}
         onClick={(e) => {

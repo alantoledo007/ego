@@ -28,7 +28,7 @@ function DetailsCarousel({details}){
                             ]}
                         >
                                 {details.map((item, index) => (  
-                                    <Card className={s['card-carousel'] + ' border-0 bg-transparent'}>
+                                    <Card key={index} className={s['card-carousel'] + ' border-0 bg-transparent'}>
                                         <Card.Body>
                                             <img className="img-fluid" key={item.id} src={item.image} />
                                             <h5 className={s['card-title']}>{item.detail}</h5>

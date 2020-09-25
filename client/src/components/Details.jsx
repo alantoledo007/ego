@@ -1,7 +1,6 @@
 //General
 import React, {useEffect, useState} from 'react';
 import { connect } from 'react-redux';
-import {Redirect} from 'react-router-dom';
 
 //actions
 import {getDetails} from '../actions/models';
@@ -11,8 +10,7 @@ import MainDetail from './MainDetail';
 import DetailsCarousel from './DetailsCarousel';
 
 //UI
-import {Row,Col, Container, Card} from 'react-bootstrap';
-import s from '../styles/details.module.scss';
+import {Container} from 'react-bootstrap';
 
 
 //code..

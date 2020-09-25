@@ -16,6 +16,9 @@ $font-family-base: 'Montserrat';
     text-align: center;
     color: #000000;
     margin-bottom: 8px;
+    @media (max-width:1000px) {
+        width: 100%;
+    }
 }
 
 .card-body{

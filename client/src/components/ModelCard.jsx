@@ -9,7 +9,7 @@ import {Col, Card} from 'react-bootstrap';
 export default function ModelCard({data}){
     const {id, model, card_image, year, price} = data;
     return (
-        <Col lg={3}>
+        <Col lg={3} md={6}>
             <Card className="border-0">
                 <Card.Body className="text-center">
                     <Card.Title className="text-center">{model}</Card.Title>
