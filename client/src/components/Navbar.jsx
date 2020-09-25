@@ -25,8 +25,8 @@ function Navbar(){
     return (
         <React.Fragment>
             <nav className={s['navbar-ego'] + ' sticky-top bg-white'}>
-                <Link to="/" className={s['navbar-ego-brand']}>
-                <img src="/img/logo.svg" alt="Ego - logo" />
+                <Link to="/ego" className={s['navbar-ego-brand']}>
+                <img src="/ego/img/logo.svg" alt="Ego - logo" />
                 </Link>
                 <Container className="mt-auto">
                     <ul>

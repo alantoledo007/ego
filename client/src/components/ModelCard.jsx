@@ -14,10 +14,10 @@ export default function ModelCard({data}){
                 <Card.Body className="text-center">
                     <Card.Title className="text-center">{model}</Card.Title>
                     <span>{year} | <CurrencyFormat displayType="text" decimalSeparator={','} thousandSeparator={'.'} prefix={'$'} value={price} /></span>
-                    <Link to={'/ficha-de-modelo/'+id}>
+                    <Link to={'/ego/ficha-de-modelo/'+id}>
                         <img src={card_image} width="100%" alt={'Imagen de: ' + model} />
                     </Link>
-                    <Link to={'/ficha-de-modelo/'+id} className="btn btn-dark btn-ego">Ver Modelo</Link>
+                    <Link to={'/ego/ficha-de-modelo/'+id} className="btn btn-dark btn-ego">Ver Modelo</Link>
                 </Card.Body>
             </Card>
         </Col>
