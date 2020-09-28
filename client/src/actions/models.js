@@ -10,8 +10,8 @@ const GET_MODEL = 'GET_MODEL';
 const GET_DETAILS = 'GET_DETAILS';
 
 //Conts
-const API_URI = 'http://localhost:8000/api/models';
-const API_DETAILS = 'http://localhost:8000/api/details';
+const API_URI = 'https://alantoledo-ego.herokuapp.com/public/api/models';
+const API_DETAILS = 'https://alantoledo-ego.herokuapp.com/public/api/details';
 
 //code..
 export function getModels(data){ //{vehicleId, orderBy, orderDirection}
